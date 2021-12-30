@@ -1,0 +1,605 @@
+/*======================================
+Common CSS Code
+=======================================*/
+
+body{
+    color:#666666;
+    font-family: Georgia,sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0;
+}
+.container{
+    margin:0 auto;
+    max-width: 960px;
+    width:96%;
+}
+.image{
+    max-width:100%;
+    height: auto;
+}
+.alignleft{
+	float:left;
+	margin-right:15px;
+	margin-bottom:15px;
+}
+.alignright{
+	float:right;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.aligncenter{
+	display:block;
+	margin:0 auto 15px;
+	max-width: 100%;
+}
+
+/*======================================
+Top Bar CSS Code
+=======================================*/
+
+
+.header_area{
+	width:100%;
+	clear:both;
+}
+.top_bar {
+  background: tomato;
+  padding: 15px 0;
+  width:100%;
+}
+.top_bar_wrapper {
+  overflow: hidden;
+}
+.mini_menu{
+	float:left;
+	width:70%;
+	padding-top:5px;
+}
+.mini_menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align:left;
+}
+.mini_menu ul li{
+	display:inline-block;
+	margin-right:20px;
+	position:relative;
+}
+.mini_menu ul li::after{
+	content:"";
+	position:absolute;
+	background:#fff;
+	width:1px;
+	height:12px;
+	top:6px;
+	right:-10px;
+}
+.mini_menu ul li:last-child::after{
+	display:none;
+}
+.mini_menu ul li a{
+	display:block;
+	color:#fff;
+	font-size:14px;
+	text-decoration:none;
+}
+.mini_menu ul li a{
+	color:#ddd;
+}
+.search_area{
+	float:right;
+	width:30%;
+}
+.search_area form{
+	float:right;
+	width:96%;
+	max-width:210px;
+	background:#fff;
+	border-radius:25px;
+	padding:2%;
+}
+.search_area input{
+	border:0px solid;
+	width:75%;
+	padding:1%;
+	float:left;
+	color:#000;
+}
+.search_area input[type="submit"]{
+	background:url(image/search.png);
+	width:23%;
+	background-repeat:no-repeat;
+	background-position:right;
+	cursor:pointer;
+}
+
+
+/*======================================
+Header Bar CSS Code
+=======================================*/
+
+.header_bar{
+	width:100%;
+	clear:both;
+	margin-top: 20px;
+}
+.header_bar_wrapper{
+	overflow:hidden;
+}
+.logo_area{
+	float:left;
+	width:100%;
+	max-width:250px;
+}
+.social_area{
+	float:right;
+	max-width:600px;
+	width:100%;
+	text-align:right;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.social_area ul li{
+	display:inline-block;
+	margin-left:15px;
+}
+.social_area ul li a{
+	display:block;
+	text-decoration:none;
+}
+.social_area ul li a i{
+	background:#333;
+	border-radius:50%;
+	display:block;
+	text-decoration:none;
+	width:35px;
+	padding-top:8px;
+	height:25px;
+	text-align:center;
+	color:#fff;
+	transition:0.5s;
+}
+.social_area ul li a:hover i{
+	color:#ba2e1f;
+}
+.social_area ul li a:hover fa-linkedin-in{
+	color:#0174B0;
+}
+.social_area ul li a:hover fa-pinterest{
+	color:#DE2A32;
+}
+.social_area ul li a:hover fa-google-plus{
+	color:#D64134;
+}
+.social_area ul li a:hover fa-twitter{
+	color:#41B7E5;
+}
+.social_area ul li a:hover fa-rss{
+	color:#ee802f;
+}
+
+
+/*======================================
+Navigation Bar CSS Code
+=======================================*/
+
+.navigation_bar{
+	width:100%;
+	clear:both;
+	margin:20px 0px;
+}
+
+/*======================================
+3step Droupdown Bar CSS Code
+=======================================*/
+
+ul.menu {
+	background:tomato;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	background: #202020;
+    list-style: none;
+}
+ul.menu li {
+	display:inline-block;
+	margin:0px 10px;
+    padding: 20px 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+}
+ul.menu li a {
+	color:#fff;
+    text-decoration: none;
+    border: none;
+}
+ul.menu li a:hover {
+	color:tomato;
+}
+ul.submenu {
+    list-style: none;
+    width: 175px;
+    position: absolute;
+    top: 45px;
+    padding: 25px 0px 0px 0px;
+    background: #202020;
+    transition: 0.5s;
+    visibility:hidden;
+    transform:scaleY(0);
+    transform-origin:top;
+}
+ul.submenu li {
+    float: none;
+    padding: 0px;
+}
+ul.submenu li a {
+    padding: 7px 0px;
+    position: relative;
+    transition: 0.5s;
+    display: block;
+    color: #fff;
+}
+ul.submenu li a:before {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 0px;
+    height: 2px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+ul.submenu li:hover a:before {
+    width: 20px;
+}
+ul.menu li:hover ul.submenu {
+    visibility: visible;
+    transform: scaleY(1);
+}
+ul.submenu2 {
+    list-style: none;
+    width: 175px;
+    position: absolute;
+    left: 140px;
+    background: #202020;
+    padding: 25px 25px 25px 0px;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    top: -20px;
+    transition: 0.5s;
+}
+ul.submenu li:hover ul.submenu2 {
+    visibility: visible;
+    transform: scaleX(1);
+}
+ul.submenu2 li a:before {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 0px !important;
+    height: 2px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+ul.submenu2 li:hover a:before {
+    width: 20px !important;
+}
+ul.submenu li a i {
+    width: 10px;
+    float: right;
+    padding: 4px;
+}
+
+
+/*======================================
+Intro Bar CSS Code
+=======================================*/
+
+
+.intro_bar {
+	padding: 25px 0px;
+	background: #ffffff;
+}
+.intro_bar_wrapper {
+	overflow: hidden;
+}
+.intro_image .alignleft {
+    margin-right: 45px !important;
+}
+.intro_text h2 {
+	color: #000;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 1em;
+	margin: 12% 0 0 0;
+}
+.intro_text p {
+	color: #666666;
+	font-size: 16px;
+}
+.intro_text a {
+	color: #b92d1f;
+	text-decoration: none;
+	float: right;
+}
+.intro_text a:hover {
+	color: #000;
+}
+
+
+/*======================================
+Content Bar CSS Code
+=======================================*/
+
+.content_bar{
+	
+}
+.content_bar_wrapper{
+	
+	overflow: hidden;
+	width: 100%;
+}
+.content_child_area {
+	
+	margin: 0px 1%;
+	width: 32%;
+	float: left;
+}
+.content_child_area h3{
+	
+	font-size: 26px;
+	color: #333333;
+	margin: 50px 0px;
+	font-weight: normal;
+}
+.content_child_area p{
+	
+	color: #878787;
+	font-size: 14px;
+	margin: 15px 0px;
+	line-height: 1.5em;
+	font-weight: normal;
+	text-align: justify;
+}
+.content_child_area a{
+	
+	color: #b92d1f;
+	font-size: 14px;
+	font-weight: normal;
+	float: right;
+	text-decoration: none;
+	clear: both;
+}
+.about_area{
+	
+	margin-left: 0px;
+}
+.about_area img{
+	
+	width: 95%;
+	border: 5px solid #ddd;
+	padding: 0px;
+	margin: 0px;
+}
+.services_area{
+	
+}
+.services_child{
+	
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.services_image{
+	
+	width: 25%;
+	float: left;
+}
+.services_image img{
+	
+}
+.services_text{
+	
+	width: 75%;
+	float: right;
+}
+.services_text h4{
+	
+	margin: 0px;
+	font-size: 15px;
+}
+.services_text p{
+	
+	margin: 0px;
+	line-height: 1.5em;
+}
+.client_area{
+	
+	margin-right: 0px;
+}
+.client_child{
+	
+	width: 100%;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.client_child h4{
+	
+	font-size: 16px;
+	color: #989898;
+	background-image: url(image/client_01.png);
+	margin: 0px;
+	padding: 15px 0px 15px 65px;
+	background-repeat: no-repeat;
+	font-weight: bold;
+}
+.client_child span{
+	
+	font-weight: normal;
+	letter-spacing: 0.05em;
+}
+.client_child p{
+	
+}
+
+
+
+/*======================================
+Footer Bar CSS Code
+=======================================*/
+
+
+.footer_area {
+	padding-top: 25px;
+}
+.footer_area_wrapper{
+	overflow: hidden;
+}
+.footer_child{
+	width: 23%;
+	float: left;
+	margin: 0px 1%;
+}
+.tweets_area{
+	margin-left: 0px;
+}
+.footer_child h3 {
+	color: #333;
+	font-size: 16px;
+	text-align: left;
+	font-weight: normal;
+	border-top: 1px solid #000;
+	padding-top: 20px;
+	margin-bottom: 25px;
+}
+.footer_child p{
+	line-height: 1.3em;
+	letter-spacing: 1px;
+	font-size: 14px;
+	word-spacing: 1.3px;
+	font-weight: normal;
+}
+.tweets_area p a{
+	text-decoration: none;
+	color: #b92d1f;
+}
+.links_area ul{
+	list-style: none;
+	padding-left: 0px;
+}
+.links_area ul li{
+	border-bottom: 1px solid #ddd;
+	padding: 4px 0px 3px 15px;
+	background: url(image/Link_01.png);
+	background-repeat: no-repeat;
+	background-size: 7px;
+	background-position-y: center;
+}
+.links_area ul li a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+	font-weight: normal;
+	letter-spacing: 1px;
+	word-spacing: 1.1px;
+	transition: 0.3s;
+}
+.links_area ul li a:hover{
+	color: #b92d1f;
+}
+.blogs_child{
+	margin-bottom: 25px;
+}
+.blogs_child h4{
+	margin: 0px auto;
+	font-size: 14px;
+	color: #666666;
+	font-weight: normal;
+	line-height: 1em;
+	padding-bottom: 5px;
+}
+.blogs_child span{
+	font-size: 10px;
+	line-height: 1em;
+	display: block;
+}
+.blogs_child span a{
+	color: #b82c1f;
+	text-decoration: none;
+	text-align: left;
+	display: initial;
+}
+.blogs_child p {
+	font-size: 12px;
+	margin: 10px 0px;
+}
+.blogs_child a{
+	text-align: right;
+	display: block;
+	color: #b82c1f;
+	text-decoration: none;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.contact_area{
+	margin-right: 0px;
+}
+.contact_area form input{
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background: #ddd;
+	width: 150px;
+	height: 30px;
+	margin-bottom: 6px;
+	padding: 0px 15px;
+}
+.contact_area form textarea{
+	height: 60px;
+	background: #ddd;
+	border: 1px solid #ddd;;
+	padding: 5px 15px;
+	width: 150px;
+	border-radius: 5px;
+}
+.contact_area form input[type="submit"]{
+	width: 80px;
+	color: #ba2e1f;
+	cursor: pointer;
+	transition: 0.3s;
+	border: 1px solid #ddd;
+}
+.contact_area form input[type="submit"]:hover{
+	background: #868181;
+}
+
+
+/*======================================
+Copyright Bar CSS Code
+=======================================*/
+
+.copyright_bar{
+	background: #f2f2f2;
+}
+.copyright_bar_wrapper{
+	overflow: hidden;
+}
+.copyright_child_1{
+	width: 60%;
+	float: left;
+	font-size: 12px;
+	color: #919191;
+}
+.copyright_child_2{
+	color: #919191;
+	font-size: 12px;
+	width: 40%;
+	float: left;
+	text-align: right;
+}
